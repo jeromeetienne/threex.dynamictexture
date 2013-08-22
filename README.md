@@ -7,6 +7,32 @@ It is similar to
 which got 
 [BABYLON.DynamicTexture](https://github.com/BabylonJS/Babylon.js/blob/master/Babylon/Materials/textures/babylon.dynamicTexture.js).
 
+Here is a [basic example](http://jeromeetienne.github.io/threex.dynamictexture/examples/basic.html) and its [source](https://github.com/jeromeetienne/threex.dynamictexture/blob/master/examples/basic.html)
+
+How To Install It
+=================
+
+You can install it manually or with
+[bower](http://bower.io/).
+for the manual version, first include ```threex.dynamictexture.js``` with the usual
+
+```html
+<script src='threex.dynamictexture.js'></script>
+```
+
+or with
+[bower](http://bower.io/) 
+you type the following to install the package.
+
+```bash
+bower install threex.dynamictexture
+```
+
+then you add that in your html
+
+```html
+<script src="bower_components/threex.dynamictexture/threex.dynamictexture.js"></script>
+```
 
 How To Use It ? 
 ===============
