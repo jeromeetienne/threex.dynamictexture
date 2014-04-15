@@ -7,7 +7,15 @@ It is similar to
 which got 
 [BABYLON.DynamicTexture](https://github.com/BabylonJS/Babylon.js/blob/master/Babylon/Materials/textures/babylon.dynamicTexture.js).
 
-Here is a [basic example](http://jeromeetienne.github.io/threex.dynamictexture/examples/basic.html) and its [source](https://github.com/jeromeetienne/threex.dynamictexture/blob/master/examples/basic.html)
+Show Don't Tell
+===============
+* [examples/basic.html](http://jeromeetienne.github.io/threex.dynamictexture/examples/basic.html)
+\[[view source](https://github.com/jeromeetienne/threex.dynamictexture/blob/master/examples/basic.html)\] :
+It shows this feature, and that one which is coded like that.
+
+A Screenshot
+============
+[![screenshot](https://raw.githubusercontent.com/jeromeetienne/threex.dynamictexture/master/examples/images/screenshot-threex-dynamictexture-512x512.jpg)](http://jeromeetienne.github.io/threex.dynamictexture/examples/basic.html)
 
 How To Install It
 =================
