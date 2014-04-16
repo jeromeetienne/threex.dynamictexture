@@ -1,11 +1,13 @@
 threex.dynamictexture
 =====================
-this is a three.js extension to handle dynamically generated texture.
-Good if you want to write text in a texture for example.
-It is similar to
+
+threex.dynamictexture is a [threex](http://www.threejsgames.com/extensions/) game extension for three.js. It provides an easy way to handle dynamically generated texture.
+Inspiration came from
 [babylon.js](http://www.babylonjs.com)
 which got 
 [BABYLON.DynamicTexture](https://github.com/BabylonJS/Babylon.js/blob/master/Babylon/Materials/textures/babylon.dynamicTexture.js).
+It is mainly used to write text in texture. Say you got a character which say something, you may want to put that in a texture and display that above your character. threex.dynamictexture will make it easy for you.
+
 
 Show Don't Tell
 ===============
