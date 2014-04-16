@@ -1,7 +1,7 @@
 threex.dynamictexture
 =====================
 
-threex.dynamictexture is a [threex](http://www.threejsgames.com/extensions/) game extension for three.js. It provides an easy way to handle dynamically generated texture.
+threex.dynamictexture is a [threex game extension for three.js](http://www.threejsgames.com/extensions/). It provides an easy way to handle dynamically generated texture.
 Inspiration came from
 [babylon.js](http://www.babylonjs.com)
 which got 
