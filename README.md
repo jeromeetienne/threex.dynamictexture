@@ -13,6 +13,11 @@ Show Don't Tell
 * [examples/basic.html](http://jeromeetienne.github.io/threex.dynamictexture/examples/basic.html)
 \[[view source](https://github.com/jeromeetienne/threex.dynamictexture/blob/master/examples/basic.html)\] :
 It shows this feature, and that one which is coded like that.
+* [examples/drawTextCooked.html](http://jeromeetienne.github.io/threex.dynamictexture/examples/drawTextCooked.html)
+\[[view source](https://github.com/jeromeetienne/threex.dynamictexture/blob/master/examples/drawTextCooked.html)\] :
+It shows ```.drawTextCooked``` function
+
+
 
 A Screenshot
 ============
