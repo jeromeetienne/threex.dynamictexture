@@ -1,3 +1,10 @@
+[ZekomZ - zekom Tribute Magazine - Github repository - ZekomXCode ThreeJS - ThreeX - dynamic texture extension for PHP/WebGL/HTML5](https://sites.google.com/site/zekomtributemagazine/zekom---github-repository/threex-dynamictexture-tree-zekomxcode)
+
+ZekomXCode - ThreeJS - ThreeX.DynamicTexture extension for PHP/WebGL/HTML5 - ZekomZ - Zekom Tribute Magazine - G+
+
+three.js ThreeX - ZekomXCode dynamic texures for PHP/WebGL/HTML5
+
+
 threex.dynamictexture
 =====================
 
