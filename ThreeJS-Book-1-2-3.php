@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<script src="js/jquery.min.js"></script>
-<script src='js/three.min.js'></script>
-<script src='js/threex.dynamic.js'></script>
+<script src="./jquery.min.js"></script>
+<script src='./three.min.js'></script>
+<script src='./threex.dynamic.js'></script>
 <body style='margin: 0px; background-color: #FFEEFF; overflow: hidden;'>
 <script>
 var renderer	= new THREE.WebGLRenderer();
