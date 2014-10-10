@@ -5,13 +5,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+ 
+$URL='./examples/1984.html';
 //$URL='./Wealth-Of-the-Nations-txt.html';
 //$URL='../Zekom-Doom-Builder/Doom-specs-1666.txt';
 //$URL='./js/three.min.js';
 
-$URL='./ThreeJS-Book-1-2-3.php';
-//
-//'./Wealth-Of-the-Nations-txt.html'
+//$URL='./ThreeJS-Book-1-2-3.php';
+
+// Read a Book :)
+
 $NWords=1111;
 $book=file_get_contents($URL);
 $bookText=substr($book,rand(0,strlen($book)-$NWords),$NWords);
