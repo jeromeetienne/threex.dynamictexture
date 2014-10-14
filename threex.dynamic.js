@@ -179,4 +179,3 @@ THREEx.DynamicTexture.prototype.drawTextWordWrap = function(text,x,y,fillStyle, 
 
 
 
-

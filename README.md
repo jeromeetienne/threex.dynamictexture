@@ -1,3 +1,10 @@
+[ZekomZ - zekom Tribute Magazine - Github repository - ZekomXCode ThreeJS - ThreeX - dynamic texture extension for PHP/WebGL/HTML5](https://sites.google.com/site/zekomtributemagazine/zekom---github-repository/threex-dynamictexture-tree-zekomxcode)
+
+ZekomXCode - ThreeJS - ThreeX.DynamicTexture extension for PHP/WebGL/HTML5 - ZekomZ - Zekom Tribute Magazine - G+
+
+three.js ThreeX - ZekomXCode dynamic texures for PHP/WebGL/HTML5
+
+
 threex.dynamictexture
 =====================
 
@@ -18,8 +25,10 @@ It shows this feature, and that one which is coded like that.
 It shows ```.drawTextCooked``` function
 
 
-
 A Screenshot
+============
+[![screenshot](https://sites.google.com/site/zekomtributemagazine/_/rsrc/1412902395945/zekom---github-repository/threex-dynamictexture-tree-zekomxcode/Zaslonska%20slika%202014-10-10%2001%3A09%3A03.png)](https://sites.google.com/site/zekomtributemagazine/zekom---github-repository/threex-dynamictexture-tree-zekomxcode)
+
 ============
 [![screenshot](https://raw.githubusercontent.com/jeromeetienne/threex.dynamictexture/master/examples/images/screenshot-threex-dynamictexture-512x512.jpg)](http://jeromeetienne.github.io/threex.dynamictexture/examples/basic.html)
 
