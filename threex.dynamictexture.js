@@ -130,6 +130,18 @@ THREEx.DynamicTexture.prototype.drawTextCooked = function(text, options){
 	}
 }
 
+/**
+ * execute the drawImage on the internal context
+ * the arguments are the same the official context2d.drawImage
+ */
+THREEx.DynamicTexture.prototype.drawImage	= function(/* same params as context2d.drawImage */){
+	// call the drawImage
+	this.context.drawImage.apply(this.context, arguments)
+	// make the texture as .needsUpdate
+	this.texture.needsUpdate	= true;
+	// for chained API 
+	return this;
+}
 
 
 
