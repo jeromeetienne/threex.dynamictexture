@@ -16,6 +16,9 @@ It shows this feature, and that one which is coded like that.
 * [examples/drawTextCooked.html](http://jeromeetienne.github.io/threex.dynamictexture/examples/drawTextCooked.html)
 \[[view source](https://github.com/jeromeetienne/threex.dynamictexture/blob/master/examples/drawTextCooked.html)\] :
 It shows ```.drawTextCooked``` function
+* [examples/drawImage.html](http://jeromeetienne.github.io/threex.dynamictexture/examples/drawImage.html)
+\[[view source](https://github.com/jeromeetienne/threex.dynamictexture/blob/master/examples/drawImage.html)\] :
+It shows ```.drawImage``` function
 
 
 
@@ -93,4 +96,13 @@ to draw a text
 ```
 dynamicTexture.drawText('Hello', 32, 256, 'red')
 ```	
-	
+**To Draw a Image**
+to draw an image, build an Image element and call this function. the arguments
+are the same as the official function
+
+```
+var image  = document.createElement('img')
+image.src  = 'image.jpg'
+dynamicTexture.drawBackground(image, 0, 0)
+``` 
+    
