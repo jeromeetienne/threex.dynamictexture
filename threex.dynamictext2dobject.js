@@ -20,6 +20,9 @@ THREEx.DynamicText2DObject	= function(){
         var dynamicTexture      = new THREEx.DynamicTexture(512,512)
 
         this.dynamicTexture     = dynamicTexture
+        // same parameters as THREEx.DynamicTexture.drawTextCooked
+        // - TODO take it from the default paramters of the functions
+        //   - no need to duplicate here
         this.parameters = {
                 text            : 'Hello World',
                 margin		: 0.1,
@@ -40,8 +43,6 @@ THREEx.DynamicText2DObject.prototype.update = function(){
         var dynamicTexture = this.dynamicTexture
         var parameters = this.parameters
         var context = dynamicTexture.context
-
-        context.font	= "bold "+(0.2*512)+"px Arial";
 	// update the text
 	dynamicTexture.clear()
         // actually draw the text

@@ -17,6 +17,7 @@
 
 	var dynamicTexture	= new THREEx.DynamicTexture(512,512)
 	dynamicTexture.context.font	= "bold "+(0.2*512)+"px Arial";
+	dynamicTexture.texture.anisotropy = renderer.getMaxAnisotropy()
 
 	// update the text
 	dynamicTexture.clear('cyan')
@@ -25,6 +26,7 @@
 		text		: 'Hello World, super wow',
 		lineHeight	: 0.2,
 	})
+
 
 	//////////////////////////////////////////////////////////////////////////////////
 	//		comment								//

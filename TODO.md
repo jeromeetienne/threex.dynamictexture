@@ -1,7 +1,7 @@
 ## TODO
 
 - expose parameters to tune
-  - store them in threex.DynamicText2DObject.parameter
+  - store them in threex.DynamicText2DObject.parameters
   - DONE remove the (text) arguments
 - which parameter to tune ?
   - why am i blocked on this
