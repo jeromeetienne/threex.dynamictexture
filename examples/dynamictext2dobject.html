@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <script src='vendor/three.js/build/three.js'></script>
 <script src='../threex.dynamictexture.js'></script>
-<body style='margin: 0px; background-color: #bbbbbb; overflow: hidden;'><script>
+<script src='../threex.dynamictext2dobject.js'></script>
+<body style='margin: 0px; overflow: hidden;'><script>
 	var renderer	= new THREE.WebGLRenderer();
 	renderer.setSize( window.innerWidth, window.innerHeight );
+	renderer.setClearColor('lightgrey')
 	document.body.appendChild( renderer.domElement );
 
 	var updateFcts	= [];
@@ -11,42 +13,45 @@
 	var camera	= new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.01, 100 );
 	camera.position.z = 3;
 
-	//////////////////////////////////////////////////////////////////////////////////
-	//		add an object and make it move					//
-	//////////////////////////////////////////////////////////////////////////////////
-
-	var dynamicTexture	= new THREEx.DynamicTexture(512,512)
-	dynamicTexture.context.font	= "bolder 90px Verdana";
-	dynamicTexture.texture.anisotropy = renderer.getMaxAnisotropy()
-	updateFcts.push(function(delta, now){
-		// build the text which contains the time
-		var present	= new Date()
-		var text	= pad(present.getHours(), 2, '0')
-			+ ':' + pad(present.getMinutes(), 2, '0')
-			+ ':' + pad(present.getSeconds(), 2, '0')
-		function pad(n, width, z) {
-			z = z || '0';
-			n = n + '';
-			return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
-		}
-
-		// update the text
-		dynamicTexture.clear('cyan')
-			.drawText(text, undefined, 256, 'red')
-
-	})
-
 
 	//////////////////////////////////////////////////////////////////////////////////
-	//		comment								//
+	//		set 3 point lighting						//
+	//////////////////////////////////////////////////////////////////////////////////
+	;(function(){
+		var object3d	= new THREE.AmbientLight(0x101010)
+		object3d.name	= 'Ambient light'
+		scene.add(object3d)
+		var object3d	= new THREE.DirectionalLight('white', 0.225)
+		object3d.position.set(2.6,1,3)
+		object3d.name	= 'Back light'
+		scene.add(object3d)
+		var object3d	= new THREE.DirectionalLight('white', 0.375)
+		object3d.position.set(-2, -1, 0)
+		object3d.name 	= 'Key light'
+		scene.add(object3d)
+		var object3d	= new THREE.DirectionalLight('white', 0.5*1)
+		object3d.position.set(3, 3, 2)
+		object3d.name	= 'Fill light'
+		scene.add(object3d)
+	})()
+
+	//////////////////////////////////////////////////////////////////////////////////
+	//		give an example
 	//////////////////////////////////////////////////////////////////////////////////
 
-	var geometry	= new THREE.BoxGeometry( 1, 1, 1);
-	var material	= new THREE.MeshBasicMaterial({
-		map	: dynamicTexture.texture
-	})
-	var mesh	= new THREE.Mesh( geometry, material );
-	scene.add( mesh );
+        var geometry = new THREE.BoxGeometry(1,1,1)
+        var material = new THREE.MeshPhongMaterial
+        var cube = new THREE.Mesh(geometry, material)
+        cube.position.z = -2
+        scene.add(cube)
+
+
+        var dynamicText2d = new THREEx.DynamicText2DObject()
+        scene.add(dynamicText2d)
+
+	dynamicText2d.dynamicTexture.texture.anisotropy = renderer.getMaxAnisotropy()
+
+
 	//////////////////////////////////////////////////////////////////////////////////
 	//		Camera Controls							//
 	//////////////////////////////////////////////////////////////////////////////////

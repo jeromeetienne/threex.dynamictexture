@@ -6,7 +6,7 @@ var THREEx	= THREEx	|| {}
 
 /**
  * create a dynamic texture with a underlying canvas
- * 
+ *
  * @param {Number} width  width of the canvas
  * @param {Number} height height of the canvas
  */
@@ -16,9 +16,9 @@ THREEx.DynamicTexture	= function(width, height){
 	canvas.height	= height
 	this.canvas	= canvas
 
-	var context	= canvas.getContext( '2d' )	
+	var context	= canvas.getContext( '2d' )
 	this.context	= context
-	
+
 	var texture	= new THREE.Texture(canvas)
 	this.texture	= texture
 }
@@ -29,7 +29,7 @@ THREEx.DynamicTexture	= function(width, height){
 
 /**
  * clear the canvas
- * 
+ *
  * @param  {String*} fillStyle 		the fillStyle to clear with, if not provided, fallback on .clearRect
  * @return {THREEx.DynamicTexture}      the object itself, for chained texture
  */
@@ -37,30 +37,30 @@ THREEx.DynamicTexture.prototype.clear = function(fillStyle){
 	// depends on fillStyle
 	if( fillStyle !== undefined ){
 		this.context.fillStyle	= fillStyle
-		this.context.fillRect(0,0,this.canvas.width, this.canvas.height)		
+		this.context.fillRect(0,0,this.canvas.width, this.canvas.height)
 	}else{
-		this.context.clearRect(0,0,this.canvas.width, this.canvas.height)		
+		this.context.clearRect(0,0,this.canvas.width, this.canvas.height)
 	}
 	// make the texture as .needsUpdate
 	this.texture.needsUpdate	= true;
-	// for chained API 
+	// for chained API
 	return this;
 }
 
 /**
  * draw text
- * 
- * @param  {String}		text	the text to display
- * @param  {Number|undefined}	x	if provided, it is the x where to draw, if not, the text is centered
- * @param  {Number}		y	the y where to draw the text
- * @param  {String*} 		fillStyle the fillStyle to clear with, if not provided, fallback on .clearRect
- * @param  {String*} 		contextFont the font to use
- * @return {THREEx.DynamicTexture}	the object itself, for chained texture
+ *
+ * @param  {String}		text	- the text to display
+ * @param  {Number|undefined}	x	- if provided, it is the x where to draw, if not, the text is centered
+ * @param  {Number}		y	- the y where to draw the text
+ * @param  {String*} 		fillStyle - the fillStyle to clear with, if not provided, fallback on .clearRect
+ * @param  {String*} 		contextFont - the font to use
+ * @return {THREEx.DynamicTexture}	- the object itself, for chained texture
  */
 THREEx.DynamicTexture.prototype.drawText = function(text, x, y, fillStyle, contextFont){
 	// set font if needed
 	if( contextFont !== undefined )	this.context.font = contextFont;
-	// if x isnt provided 
+	// if x isnt provided
 	if( x === undefined || x === null ){
 		var textSize	= this.context.measureText(text);
 		x = (this.canvas.width - textSize.width) / 2;
@@ -70,20 +70,24 @@ THREEx.DynamicTexture.prototype.drawText = function(text, x, y, fillStyle, conte
 	this.context.fillText(text, x, y);
 	// make the texture as .needsUpdate
 	this.texture.needsUpdate	= true;
-	// for chained API 
+	// for chained API
 	return this;
 };
 
-THREEx.DynamicTexture.prototype.drawTextCooked = function(text, options){
+THREEx.DynamicTexture.prototype.drawTextCooked = function(options){
 	var context	= this.context
 	var canvas	= this.canvas
 	options		= options	|| {}
+	var text	= options.text
 	var params	= {
 		margin		: options.margin !== undefined ? options.margin	: 0.1,
 		lineHeight	: options.lineHeight !== undefined ? options.lineHeight : 0.1,
 		align		: options.align !== undefined ? options.align : 'left',
 		fillStyle	: options.fillStyle !== undefined ? options.fillStyle : 'black',
 	}
+	// sanity check
+	console.assert(typeof(text) === 'string')
+
 	context.save()
 	context.fillStyle	= params.fillStyle;
 
@@ -139,9 +143,6 @@ THREEx.DynamicTexture.prototype.drawImage	= function(/* same params as context2d
 	this.context.drawImage.apply(this.context, arguments)
 	// make the texture as .needsUpdate
 	this.texture.needsUpdate	= true;
-	// for chained API 
+	// for chained API
 	return this;
 }
-
-
-
